@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<style>
+			body {
+				background-color: blue;
+			}
+			header {
+				height: 150px;
+				text-align: center;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				font-size: 250%;
+			}
+			header a {
+				color: orange;
+				text-decoration: none;
+			}
+			nav {
+				border: 1px solid;
+				line-height: 35px;
+				text-align: left;
+				padding: 50px;
+				padding-top: 10px;
+			}
+			nav a {
+				color: white;
+				text-decoration: none; 
+				font-weight: bold;
+				font-size: 18px;		
+				margin-right: 60px;
+			}
+			nav a:first-child {
+				background-color: red;
+				padding: 10px;	
+				margin-left: 27px;
+			}
+			nav a:last-child {
+				text-align: right;
+				font-size: 18px;
+				text-decoration: underline;
+			}
+			form {
+				text-align: right;
+				float: right;
+				margin-right: 27px;
+			}
+			#bottone {
+				border: 2px solid red;
+				background-color: blue;
+				color: white;
+				font-weight: bold;
+			}		
+			#griglia {
+				padding: 0;
+				margin: 0;
+			}
+			#griglia > img {
+				border: 2px solid #333333;
+				display: inline-block;
+				margin: 10px;
+			}
+			#container {
+				margin:0 auto;
+				text-align: center;
+			}
+			img {
+				width: 27%;	
+				height: 250px;
+			}
+		</style>
+		<script type="text/javascript" src="home.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="home_ospite.html"><h1>A TUTTO SPORT!</h1></a>
+		</header>
+		<nav> 
+				<a href="" onclick="window.alert('Prima di prenotare devi effettuare il Login')">PRENOTA IL TUO CAMPO</a>
+				<a href="registrazione.html">Registrati</a>
+				<form name="login" action="login.php" method="post">
+					<input type="text" placeholder="Username" name="user" autocomplete required />			
+					<input type="password" placeholder="Password" name="psw" required />
+					<input type="submit" id="bottone" value="Accedi" />
+				</form>
+		</nav>
+		<section id="container">
+			<figure id="griglia">
+				<img src="images/calcetto.jpg" alt="Campo da calcio a 5" id="img1" />
+				<img src="images/basket.jpeg" alt="Campo da basket" id="img2" />
+				<img src="images/tennis.jpg" alt="Campo da tennis" id="img3" />
+			</figure>
+		</section>
+	</body>
+</html>

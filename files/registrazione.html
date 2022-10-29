@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registrazione</title>
+		<style>
+			body {
+				background-color: blue;
+			}
+			header {
+				height: 150px;
+				text-align: center;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				font-size: 250%;
+			}
+			header a{
+				color: orange;
+				text-decoration: none;
+			}
+			nav {
+				border: 1px solid;
+				line-height: 35px;
+				text-align: left;
+				padding: 50px;
+				padding-top: 10px;
+			}
+			nav a {
+				color: white;
+				text-decoration: none; 
+				font-weight: bold;
+				font-size: 18px;		
+				margin-right: 50px;
+			}
+			nav a:first-child {
+				background-color: red;
+				padding: 10px;
+				margin-left: 27px;
+			}
+			nav form {
+				text-align: right;
+				float: right;
+				margin-right: 27px;
+			}
+			section h1 {
+				text-align: center;
+				font-family: "Lucida Console";
+				font-size: 40px;
+				color: red;
+				text-decoration: underline;
+			}
+			table {
+				margin: auto;
+				font-weight: bold;
+			}
+			.bottone {
+				border: 2px solid red;
+				background-color: blue;
+				color: white;
+				font-weight: bold;
+				margin-top: 10px;
+			}	
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="home_ospite.html"><h1>A TUTTO SPORT!</h1></a>
+		</header>
+		<nav> 
+			<a href="" onclick="window.alert('Prima di prenotare devi effettuare il Login')">PRENOTA IL TUO CAMPO</a> 
+			<form name="login" action="login.php" method="post">
+				<input type="text" placeholder="Username" name="user" autocomplete required />			
+				<input type="password" placeholder="Password" name="psw" required />
+				<input type="submit" class="bottone" value="Accedi" />
+			</form>			
+		</nav>
+		<section>
+			<h1>Registrazione</h1>
+			<form name="registrazione" action="registrazione.php" method="post">
+				<table>
+					<tr>
+						<td>Nome</td> <td><input type="text" name="nome" required /></td>
+					</tr>
+					<tr>
+						<td>Cognome</td> <td><input type="text" name="cognome" required /></td>
+					</tr>
+					<tr>
+						<td>Data di nascita</td> <td><input type="date" name="nascita" required /></td>
+					</tr>
+					<tr>
+						<td>Citt&agrave; di Residenza</td> 
+						<td>
+							<input type="text" name="residenza" required />
+						</td>
+					</tr>
+					<tr>
+						<td>Via</td> <td><input type="text" name="via" required /></td>
+					</tr>
+					<tr>
+						<td>Username</td> <td><input type="text" name="user" pattern=".{5,15}" required /></td>
+					</tr>
+					<tr>
+						<td>Password</td> <td><input type="password" name="psw" pattern=".{8,}" required /></td>
+					</tr>
+					<tr>
+						<td>Ripeti Password</td> <td><input type="password" name="psw_repeat" pattern=".{8,}" required /></td>
+					</tr>
+					<tr>
+						<td><input type="reset" value="RESET" class="bottone" /></td> <td><input type="submit" value="REGISTRATI" class="bottone" /></td>
+					</tr>
+				</table>
+			</form>
+		</section>
+	</body>
+</html>
